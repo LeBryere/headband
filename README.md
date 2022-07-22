@@ -1,4 +1,4 @@
-# [LeBryere - 3D menu](https://lebryere.github.io/headband.github.io/)
+# [LeBryere - Mia Headband](https://lebryere.github.io/headband.github.io/)
 
 ## Preview
 
