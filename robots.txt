@@ -1,7 +1,7 @@
 ﻿# created by Miaheadband
 Sitemap: https://miaheadband.hu/sitemap.xml
-User-agent: googlebot
-Disallow:
+User-agent: *
+Disallow: /
 User-agent: libwww-perl
 User-agent: libwwwperl
 User-agent: attach
