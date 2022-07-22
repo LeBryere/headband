@@ -1,0 +1,204 @@
+﻿::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar:hover {
+    //width: 14px;
+}
+::-webkit-scrollbar-track {
+    background: lighten($main_color, 15%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    height: 30px;
+    background: $main_color;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+        inset -2px -2px 2px rgba(23, 23, 46, 0.411);
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+        inset -2px -2px 2px rgba(23, 23, 46, 0.411);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: darken($main_color, 12%);
+}
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: $main_color;
+}
+
+::selection {
+    color: white;
+    background: $main_color;
+}
+//========== Responsive Mixins Start here
+@mixin clearfix() {
+    clear: both;
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+@mixin prefixek($property, $value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+/* Responsive Call = @include res(media){@contents;}
+  media = m1920, m1600, m1200, m992, m768, m640, m480, m320 */
+@mixin res($media) {
+    @if $media == max1920 {
+        @media only screen and (max-width: 1920px) {
+            @content;
+        }
+    }
+    /* Extra Large Devices, Wide Screens */
+    @if $media == max1600 {
+        @media only screen and (max-width: 1600px) {
+            @content;
+        }
+        /* Large Devices, Wide Screens */
+    } @else if $media == min1201 {
+        @media only screen and (min-width: 1201px) {
+            @content;
+        }
+    } @else if $media == max1200 {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+        /* Medium Devices, Desktops */
+    } @else if $media == min993 {
+        @media only screen and (min-width: 993px) {
+            @content;
+        }
+    } @else if $media == max992 {
+        @media only screen and (max-width: 992px) {
+            @content;
+        }
+        /* Small Devices, Tablets */
+    } @else if $media == min769 {
+        @media only screen and (min-width: 769px) {
+            @content;
+        }
+    } @else if $media == max768 {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+        /* Small Devices, Tablets */
+    } @else if $media == max640 {
+        @media only screen and (max-width: 640px) {
+            @content;
+        }
+        /* Extra Small Devices, Phones */
+    } @else if $media == max480 {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+        /* Custom, iPhone Retina */
+    } @else if $media == max320 {
+        @media only screen and (max-width: 320px) {
+            @content;
+        }
+    }
+}
+// ====== Responsive Mixins End here
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+html {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    overflow-y: scroll !important;
+    scroll-behavior: smooth;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    vertical-align: baseline;
+    font-size: 14px;
+}
+body {
+    //display: flex;
+    font-family: $body-font, -apple-system, BlinkMacSystemFont, "Josefin Sans",
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0;
+    text-transform: none;
+    color: $font_color;
+    background: lighten($main_color, 30%);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+    //max-width: 1600px;
+}
+li {
+    list-style: none;
+}
+a {
+    color: $font_color;
+    font-family: $body_font;
+    text-shadow: 1px 1px 1px $font_color_hover;
+    list-style: none;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+    cursor: pointer;
+}
+h1,
+h2,
+h3 {
+    display: block;
+    font-family: $title_font;
+    font-weight: 400;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+h1 {
+    font-size: 2.4em;
+    text-transform: uppercase;
+    color: $font_color;
+}
+h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: $font_color;
+}
+h3 {
+    font-size: 1.2em;
+    font-family: $body_font;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: $font_color;
+    text-transform: none;
+}
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,205 @@
+﻿.product_main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product:first-child {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+.product:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+@include res(max768) {
+    .product_main_2 {
+        display: none;
+    }
+}
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(calc(768px - 100%) * 999);
+    flex-grow: 1;
+    width: 100%;
+    margin: 10px;
+    @include res(max768) {
+        margin: 0px 0px 10px;
+    }
+}
+.product:first-child {
+    margin-right: 0px;
+    @include res(max768) {
+        margin-bottom: 0px;
+    }
+}
+.product.holder:first-child {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.product.holder:last-child {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+@include res(max768) {
+    .product {
+        margin-top: 10px;
+    }
+    .m768_none {
+        display: none;
+    }
+}
+@include res(min769) {
+    .m768_block {
+        display: none;
+    }
+}
+
+.product_inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.inner_png {
+    width: 100%;
+}
+.hajcsatok,
+.hajpantok {
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.hajcsatok_inner,
+.hajpantok_inner {
+    position: absolute;
+    padding: 10px 30px;
+    background: rgba(154, 154, 181, 0.5);
+    font-family: $title_font;
+    box-shadow: 2px 2px 4px rgba(43, 43, 59, 0.24),
+        6px 6px 9px rgba(65, 65, 89, 0.7);
+}
+
+.hajcsatok_inner img,
+.hajpantok_inner img {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    right: 0;
+    margin: auto;
+    zoom: 1.6;
+    -webkit-filter: drop-shadow(7px 9px 3px rgba(43, 43, 59, 0.7));
+    -webkit-backdrop-filterr: drop-shadow(7px 9px 3px rgba(43, 43, 59, 0.7));
+    @include res(max1200) {
+        zoom: 1.4;
+    }
+    @include res(max992) {
+        zoom: 1.2;
+    }
+    @include res(max480) {
+        zoom: 1;
+    }
+    @include res(max320) {
+        zoom: 0.8;
+    }
+}
+.hajcsatok_inner img {
+    transform: rotate(15deg);
+}
+.hajpantok_inner img {
+    transform: rotate(-15deg);
+}
+.hajcsatok_inner h1,
+.hajpantok_inner h1 {
+    font-size: 3.5rem;
+    color: white;
+    @include res(max992) {
+        font-size: 2rem;
+    }
+    @include res(max768) {
+        font-size: 3.5rem;
+    }
+    @include res(max640) {
+        font-size: 2.5rem;
+    }
+    @include res(max480) {
+        font-size: 2rem;
+    }
+    @include res(max320) {
+        font-size: 1.2rem;
+    }
+}
+
+.product_holder {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product_img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    a {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+    }
+    img:hover {
+        transform: scale(1.08);
+        -webkit-transform: scale(1.08);
+        -moz-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+        -o-transform: scale(1.08);
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+    }
+    h2 {
+        font-family: $title-font;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        font-weight: 500;
+        color: darken($main_color, 5%);
+    }
+    h3 {
+        font-family: $body-font;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        font-weight: 300;
+        color: $main_color;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+}
+.product_blend {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.product_text {
+    padding: 15px 0px;
+}

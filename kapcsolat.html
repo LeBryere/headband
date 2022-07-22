@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Miaheadband</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset = UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Miaheadband" />
+    <meta property="og:url" content="https://www.miaheadband.hu" />
+    <meta property="og:site_name" content="MiaHeadband" />
+    <meta property="og:type" content="website" />
+
+    <meta name="fb_admins_meta_tag" content="miaheadband" />
+    <meta property="fb:admins" content="miaheadband" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Miaheadband" />
+    <meta name="author" content="LeBryere">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="x-icon" href="img/icon/favicon.png">
+    <link rel="apple-touch-icon" href="img/icon/favicon.png">
+
+    <link rel="stylesheet" href="sass/style_contact.min.css">
+    <link rel="canonical" href="https://www.miaheadband.hu" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="preloader_inner">
+            <img src="img/MiaHeadband_logo.png" id="preloader_image" alt="MiaHandband">
+        </div>
+    </div>
+    <div id="container">
+        <div class="wrapper">
+            <header id="myNav">
+                <nav class="nav">
+                    <div class="nav_social">
+                        <div class="nav_social_inner">
+                            <a href="https://www.instagram.com/miaheadband/"><img src="img/icon/instagram2.png"
+                                    alt="MiaHandband instagram">
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="nav_list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hajcsatok.html">Hajcsatok</a></li>
+                        <li><a href="hajpantok.html">Hajpántok</a></li>
+                        <li><a href="rolam.html">Rólam</a></li>
+                        <li><a class="menu_active" href="#">Kapcsolat</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav_mobile">
+                    <div class="nav_mobile_social">
+                        <div class="nav_social_inner">
+                            <a href="https://www.instagram.com/miaheadband/"><img src="img/icon/instagram2.png"
+                                    alt="MiaHandband instagram">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="nav_bar" class="nav_bar" onclick="myNavbar(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul id="nav_list" class="nav_list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="hajcsatok.html">Hajcsatok</a></li>
+                        <li><a href="hajpantok.html">Hajpántok</a></li>
+                        <li><a href="rolam.html">Rólam</a></li>
+                        <li><a class="menu_active" href="#">Kapcsolat</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="" class="container">
+                <div class="kapcsolat">
+                    <div class="kapcsolat_text">
+                        <img src="img/MiaHeadband_logo.png" alt="" srcset="">
+                        <h3>
+                            E-mail: info@miaheadband.hu<br>
+                            Telefon: +36307827871
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_container">
+                <div class="impr_text_container">
+                    <a href="aszf.html">
+                        <h3>ÁSZF</h3>
+                    </a>
+                    <a <a href="data_management.html">
+                        <h3>Adatkezelési tájékoztató</h3>
+                    </a>
+                </div>
+                <div class="impr_img">
+                    <img src="img/MiaHeadband_logo.png" alt="MiaHandband logo">
+                </div>
+                <div class="impr_text_container">
+                    <a href="#">
+                        <h3>©2021 MiaHeadband</h3>
+                    </a>
+                    <a href="https://www.neubeller.com">
+                        <h3>Logo & Design by Neubeller</h3>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+        (function ($) {
+
+            // Preloader 
+            jQuery(window).on('load', function () {
+                jQuery("#status").fadeOut();
+                jQuery("#preloader").delay(10).fadeOut("slow");
+            });
+
+        })();
+        function myNavbar(e) {
+            e.classList.toggle("change")
+            nav_list.classList.toggle("nav_active")
+        }
+
+        window.onload = function () {
+            let lastScrollTop = 0
+            window.addEventListener("scroll", function () {
+                let st = window.pageYOffset //|| document.documentElement.scrollTop
+                // myDiv elem magasságból kivonom a mxDiv2 mert akkor a hamarabb teszi rá a black classt a
+                //const distanceY = $("#myDiv").height() - $("#myDiv2").height()
+                // oldal toptól számítva mikor tegye rá az opacityt? 
+                // pixelben kell megadni
+                const distanceY = 1
+                const distanceY2 = $("#myDiv").height() / 3
+                const distanceY21 = $("#myDiv").height() / 2
+                //window.alert(distanceY2)
+                if (st > lastScrollTop) {
+                    // görgetés lefelé distanceY után ráteszi a class-t id="myNav"-ra
+                    if (distanceY < window.pageYOffset) {
+                        $("#myNav").addClass("nav_op")
+                    }
+                } else {
+                    // görgetés felfelé azonnal leveszi a class-t id="myNav"-ról
+                    $("#myNav").removeClass("nav_op")
+                }
+                if (st > lastScrollTop) {
+
+                    // scroll down leveszi a class-t a id="myDiv2"-ről
+                    if (distanceY2 < window.pageYOffset) {
+                        $("#myDiv2").removeClass("div_lighter")
+                    }
+                } else {
+                    if (distanceY21 > window.pageYOffset) {
+                        // scroll top ráteszi a class-t az id="myDiv2"-re
+                        $("#myDiv2").addClass("div_lighter")
+                    }
+                }
+                lastScrollTop = st
+            }, false)
+        }
+    </script>
+
+</body>
+
+</html>

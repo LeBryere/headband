@@ -1,0 +1,159 @@
+﻿.hajcsatok_main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-image: url("../img/product_bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.hajcsatok_main > img {
+    width: clamp(200px, 30%, 400px);
+    margin-top: 40px;
+    -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
+    -webkit-backdrop-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
+}
+.hajcsatok_text {
+    display: flex;
+    width: clamp(768px, 75%, 1600px);
+    //mix-blend-mode: overlay;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+
+    @include res(max768) {
+        width: 80%;
+        /* text-align: center; */
+        height: 60vh;
+        background: rgba(255, 255, 255, 0.4);
+        flex-direction: column;
+        align-items: center;
+    }
+    .hajcsatok_text_img {
+        width: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        @include res(max768) {
+            width: 100%;
+        }
+    }
+    .hajcsatok_text_container {
+        display: flex;
+        width: 50%;
+        a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            color: none;
+            font-family: none;
+            text-shadow: none;
+            list-style: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-family: $title_font;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: clamp(1rem, 2.5em, 1.5rem);
+            color: rgba(115, 115, 115, 0.7);
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            opacity: 1;
+        }
+        h3:before {
+            position: absolute;
+            content: "válassz színt!";
+            background: $main_color;
+            color: white;
+            padding: 14px 35px 10px;
+            border-radius: 30px;
+            filter: drop-shadow(3px 3px 6px #4d4d4d);
+            -webkit-filter: drop-shadow(3px 3px 6px #4d4d4d);
+            opacity: 0;
+            transition: opacity 0.7s ease;
+            -webkit-transition: opacity 0.7s ease;
+            -moz-transition: opacity 0.7s ease;
+            -ms-transition: opacity 0.7s ease;
+            -o-transition: opacity 0.7s ease;
+        }
+    }
+    @include res(max768) {
+        .hajcsatok_text_container {
+            width: 100%;
+            min-height: 25%;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+    .hajcsatok_text_container:hover {
+        h3 span {
+            opacity: 0;
+        }
+        h3 {
+            color: transparent;
+        }
+        h3:before {
+            opacity: 1;
+        }
+        h3:active:before {
+            filter: drop-shadow(2px 2px 4px #4d4d4d);
+            -webkit-filter: drop-shadow(2px 2px 4px #4d4d4d);
+        }
+    }
+}
+@include res(max768) {
+    .order:nth-of-type(1) {
+        order: 2;
+    }
+    .order:nth-of-type(2) {
+        order: 1;
+    }
+}
+.hajcsatok_text:first-child {
+    margin-top: calc(50px + 5%);
+}
+.hajcsatok_text:last-child {
+    margin-bottom: 5%;
+}
+.hajcsato_more {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 200px;
+    background: #f2f2f6;
+    text-align: center;
+    h1 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        color: rgba(115, 115, 115, 0.7);
+        margin-top: -10px;
+    }
+    h3 {
+        font-size: 1rem;
+        font-weight: 300;
+        color: rgba(115, 115, 115, 0.7);
+    }
+    @include res(max768) {
+        h1 {
+            font-size: 1rem;
+        }
+        h3 {
+            font-size: 0.75rem;
+        }
+    }
+}

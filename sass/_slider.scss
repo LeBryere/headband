@@ -1,0 +1,20 @@
+﻿.slider_mia {
+    position: relative;
+    margin-top: 50px;
+}
+// ================ Mia brand Logo
+.mia_logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    -webkit-filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, 0.5))
+        drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
+    -webkit-backdrop-filter: drop-shadow(-1px -1px 1px rgba(255, 255, 255, 0.5))
+        drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));
+    opacity: 1;
+    z-index: 1;
+}

@@ -1,0 +1,34 @@
+﻿.kapcsolat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/kapcsolat.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.kapcsolat_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    mix-blend-mode: overlay;
+    text-align: center;
+    h3 {
+        font-family: $body_font;
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+    img {
+        -webkit-filter: drop-shadow(-1px -1px 2px #fff)
+            drop-shadow(2px 1px 1px rgba(0, 0, 0, 1));
+        -webkit-backdrop-filter: drop-shadow(-1px -1px 2px #fff)
+            drop-shadow(2px 1px 1px rgba(0, 0, 0, 1));
+    }
+}

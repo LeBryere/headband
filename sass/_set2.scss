@@ -1,0 +1,264 @@
+﻿::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar:hover {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: lighten($main_color, 5%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: darken($main_color, 15%);
+    background: -moz-linear-gradient(
+        left,
+        lighten(darken($main_color, 15%), 10%) 0%,
+        darken($main_color, 15%) 50%,
+        lighten(darken($main_color, 15%), 10%) 100%
+    );
+    background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, lighten(darken($main_color, 15%), 10%)),
+        color-stop(50%, darken($main_color, 15%)),
+        color-stop(100%, lighten(darken($main_color, 15%), 10%))
+    );
+    background: -webkit-linear-gradient(
+        left,
+        lighten(darken($main_color, 15%), 10%) 0%,
+        darken($main_color, 15%) 50%,
+        lighten(darken($main_color, 15%), 10%) 100%
+    );
+    background: -o-linear-gradient(
+        left,
+        lighten(darken($main_color, 15%), 10%) 0%,
+        darken($main_color, 15%) 50%,
+        lighten(darken($main_color, 15%), 10%) 100%
+    );
+    background: -ms-linear-gradient(
+        left,
+        lighten(darken($main_color, 15%), 10%) 0%,
+        darken($main_color, 15%) 50%,
+        lighten(darken($main_color, 15%), 10%) 100%
+    );
+    background: linear-gradient(
+        to right,
+        lighten(darken($main_color, 15%), 10%) 0%,
+        darken($main_color, 15%) 50%,
+        lighten(darken($main_color, 15%), 10%) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=1);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken($main_color, 25%);
+    background: -moz-linear-gradient(
+        left,
+        lighten(darken($main_color, 25%), 10%) 0%,
+        darken($main_color, 25%) 50%,
+        lighten(darken($main_color, 25%), 10%) 100%
+    );
+    background: -webkit-gradient(
+        left top,
+        right top,
+        color-stop(0%, lighten(darken($main_color, 25%), 10%)),
+        color-stop(50%, darken($main_color, 25%)),
+        color-stop(100%, lighten(darken($main_color, 25%), 10%))
+    );
+    background: -webkit-linear-gradient(
+        left,
+        lighten(darken($main_color, 25%), 10%) 0%,
+        darken($main_color, 25%) 50%,
+        lighten(darken($main_color, 25%), 10%) 100%
+    );
+    background: -o-linear-gradient(
+        left,
+        lighten(darken($main_color, 25%), 10%) 0%,
+        darken($main_color, 25%) 50%,
+        lighten(darken($main_color, 25%), 10%) 100%
+    );
+    background: -ms-linear-gradient(
+        left,
+        lighten(darken($main_color, 25%), 10%) 0%,
+        darken($main_color, 25%) 50%,
+        lighten(darken($main_color, 25%), 10%) 100%
+    );
+    background: linear-gradient(
+        to right,
+        lighten(darken($main_color, 25%), 10%) 0%,
+        darken($main_color, 25%) 50%,
+        lighten(darken($main_color, 25%), 10%) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=1);
+    border-radius: 5px;
+}
+
+//========== Responsive Mixins Start here
+@mixin clearfix() {
+    clear: both;
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+@mixin transition($trans) {
+    -webkit-transition: all $trans ease;
+    -moz-transition: all $trans ease;
+    -ms-transition: all $trans ease;
+    -o-transition: all $trans ease;
+    transition: all $trans ease;
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin box-shadow($shadow) {
+    -webkit-transition: $shadow;
+    -moz-transition: $shadow;
+    box-shadow: $shadow;
+}
+
+/* Responsive Call = @include res(media){@contents;}
+  media = m1920, m1600, m1200, m992, m768, m640, m480, m320 */
+@mixin res($media) {
+    @if $media == m1920 {
+        @media only screen and (max-width: 1920px) {
+            @content;
+        }
+    }
+    /* Extra Large Devices, Wide Screens */
+    @if $media == m1600 {
+        @media only screen and (max-width: 1600px) {
+            @content;
+        }
+        /* Large Devices, Wide Screens */
+    } @else if $media == m1200 {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+        /* Medium Devices, Desktops */
+    } @else if $media == m992 {
+        @media only screen and (max-width: 992px) {
+            @content;
+        }
+        /* Small Devices, Tablets */
+    } @else if $media == m768 {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+        /* Small Devices, Tablets */
+    } @else if $media == m640 {
+        @media only screen and (max-width: 640px) {
+            @content;
+        }
+        /* Extra Small Devices, Phones */
+    } @else if $media == m480 {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+        /* Custom, iPhone Retina */
+    } @else if $media == m320 {
+        @media only screen and (max-width: 320px) {
+            @content;
+        }
+    }
+}
+// ====== Responsive Mixins End here
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+html {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    overflow-y: scroll !important;
+    scroll-behavior: smooth;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    vertical-align: baseline;
+    font-size: 14px;
+}
+body {
+    display: flex;
+    font-family: $body-font, -apple-system, BlinkMacSystemFont, "Josefin Sans",
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0;
+    text-transform: none;
+    color: $font_color;
+    background: lighten($main_color, 30%);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+    max-width: 1600px;
+}
+li {
+    list-style: none;
+}
+a {
+    color: $font_color;
+    font-family: $body_font;
+    text-shadow: 1px 1px 3px $font_color_hover;
+    list-style: none;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+    cursor: pointer;
+}
+h1,
+h2,
+h3 {
+    display: block;
+    font-family: $title_font;
+    font-weight: 400;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+h1 {
+    font-size: 2.4em;
+    text-transform: uppercase;
+    color: $font_color;
+}
+h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: $font_color;
+}
+h3 {
+    font-size: 1em;
+    color: $font_color;
+}
+img {
+    max-width: 100%;
+}

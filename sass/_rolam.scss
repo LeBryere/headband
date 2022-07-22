@@ -1,0 +1,72 @@
+﻿.rolam {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.rolam_left,
+.rolam_right {
+    width: 30%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.rolam_left {
+    background-image: url("../img/rolam/rolam_1.webp");
+}
+.rolam_right {
+    background-image: url("../img/rolam/rolam_2.webp");
+}
+.rolam_left img,
+.rolam_right img {
+    max-width: -webkit-fill-available;
+    height: 100%;
+}
+.rolam_text {
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #eeeef2;
+    img {
+        -webkit-filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.7));
+        -webkit-backdrop-filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.7));
+    }
+    h1 {
+        font-size: 2rem;
+        color: darken($main_color, 5%);
+        margin: 10px 0 20px;
+    }
+    h3 {
+        font-family: $body_font;
+        letter-spacing: 0mm;
+        font-weight: 100;
+        color: rgba(0, 0, 0, 0.9);
+        text-align: justify;
+        line-height: 1.875em;
+        padding: 0 25px 20px;
+    }
+    .hajcsat_candy {
+        margin-bottom: 20%;
+        width: 15%;
+    }
+}
+.rolam_logo {
+    width: 50%;
+}
+@include res(max992) {
+    .rolam {
+        flex-direction: column;
+        .rolam_left,
+        .rolam_right {
+            width: auto;
+            height: 100vh;
+        }
+        .rolam_text {
+            width: auto;
+        }
+    }
+}

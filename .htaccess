@@ -1,0 +1,13 @@
+<ifModule mod_headers.c>
+  Header set Connection keep-alive
+  # 1 hetes tárazás
+   <filesMatch ".(css|js)$">
+      Header set Cache-Control "max-age=604800, public"
+    </filesMatch>
+  # 1 hónapops tárazás
+    <filesMatch ".(jpg|jpeg|png|gif|swf|ico|pdf|flv)$"> 
+      Header set Cache-Control "max-age=2592000, public"
+    </filesMatch>
+</ifModule>
+
+# ErrorDocument 404 https://www.miaheadband.hu/404.php
