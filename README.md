@@ -8,7 +8,7 @@
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://raw.githubusercontent.com/LeBryere/headband/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](LICENSE)
 
 ## Usage
 
@@ -31,4 +31,4 @@ Add basic metadata to your head of web page and fill it out accordingly:
  
 ## Copyright and License
 
-Copyright 2022 Lebryere. Code released under the [MIT](https://raw.githubusercontent.com/LeBryere/headband/master/LICENSE) license.
+Copyright 2022 Lebryere. Code released under the [MIT](LICENSE) license.
