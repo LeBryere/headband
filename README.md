@@ -1,10 +1,10 @@
-# [LeBryere - Mia Headband](https://lebryere.github.io/headband.github.io/)
+# [LeBryere - Mia Headband](https://lebryere.github.io/headband/)
 
 ## Preview
 
-[![Resume Preview](https://raw.githubusercontent.com/LeBryere/3D-menu/master/preview.png)](https://lebryere.github.io/headband.github.io/)
+[![Resume Preview](https://raw.githubusercontent.com/LeBryere/3D-menu/master/preview.png)](https://lebryere.github.io/headband/)
 
-**[View Live Preview](https://lebryere.github.io/headband.github.io/)**
+**[View Live Preview](https://lebryere.github.io/headband/)**
 
 ## Status
 
