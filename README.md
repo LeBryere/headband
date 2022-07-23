@@ -19,7 +19,6 @@ After downloading, simply edit the HTML and CSS files included with `root` direc
 ### Color variables
 ```
 :root{
-
 }
 ```
 
