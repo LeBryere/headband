@@ -1,14 +1,14 @@
-# [LeBryere - Mia Headband](https://lebryere.github.io/headband.github.io/)
+# [LeBryere - Mia Headband](https://lebryere.github.io/mia-headband.github.io/)
 
 ## Preview
 
-[![Resume Preview](https://raw.githubusercontent.com/LeBryere/3D-menu/master/preview.png)](https://lebryere.github.io/headband.github.io/)
+[![Resume Preview](https://raw.githubusercontent.com/LeBryere/mia-headband/master/preview.png)](https://lebryere.github.io/mia-headband.github.io/)
 
-**[View Live Preview](https://lebryere.github.io/headband.github.io/)**
+**[View Live Preview](https://lebryere.github.io/mia-headband.github.io/)**
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://raw.githubusercontent.com/LeBryere/headband/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green?&style=plastic)](https://raw.githubusercontent.com/LeBryere/mia-headband/master/LICENSE)
 
 ## Usage
 
@@ -19,8 +19,10 @@ After downloading, simply edit the HTML and CSS files included with `root` direc
 ### Color variables
 ```
 :root{
+   
 }
 ```
+
 ### Open Graph
 
 Add basic metadata to your head of web page and fill it out accordingly:
@@ -30,4 +32,4 @@ Add basic metadata to your head of web page and fill it out accordingly:
  
 ## Copyright and License
 
-Copyright 2022 Lebryere. Code released under the [MIT](https://raw.githubusercontent.com/LeBryere/headband/master/LICENSE) license.
+Copyright 2022 Lebryere. Code released under the [MIT](https://raw.githubusercontent.com/LeBryere/mia-headband/master/LICENSE) license.
